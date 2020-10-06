@@ -1,0 +1,13 @@
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\bin\Debug\Calendar.NETDemo.exe
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\bin\Debug\Calendar.NETDemo.pdb
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\bin\Debug\Calendar.NET.dll
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\bin\Debug\Calendar.NET.pdb
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\bin\Debug\Calendar.NET.xml
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.csprojAssemblyReference.cache
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.Form1.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.Properties.Resources.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.csproj.GenerateResource.cache
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.csproj.CoreCompileInputs.cache
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.csproj.CopyComplete
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.exe
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NETDemo\obj\x86\Debug\Calendar.NETDemo.pdb

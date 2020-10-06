@@ -1,0 +1,16 @@
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\bin\Debug\Calendar.NET.XML
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\bin\Debug\Calendar.NET.dll
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\bin\Debug\Calendar.NET.pdb
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.csprojAssemblyReference.cache
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.Calendar.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.CoolButton.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.EventDetails.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.EventToolTip.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.NavigateLeftButton.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.NavigateRightButton.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.ScrollPanel.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.TodayButton.resources
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.csproj.GenerateResource.cache
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.csproj.CoreCompileInputs.cache
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.dll
+C:\Users\Chanos\Desktop\git\Personal-Project\CryptoChan\3rdparty\CalendarNETSource\Calendar.NET\obj\Debug\Calendar.NET.pdb
