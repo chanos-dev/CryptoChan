@@ -1,4 +1,4 @@
-﻿namespace CryptChan
+﻿namespace CryptoChan
 {
     partial class UserTextBox
     {
@@ -59,7 +59,7 @@
             // 
             // pictureBox_show
             // 
-            this.pictureBox_show.Image = global::CryptChan.Properties.Resources.show_silver;
+            this.pictureBox_show.Image = global::CryptoChan.Properties.Resources.show_silver;
             this.pictureBox_show.Location = new System.Drawing.Point(177, 3);
             this.pictureBox_show.Name = "pictureBox_show";
             this.pictureBox_show.Size = new System.Drawing.Size(20, 20);

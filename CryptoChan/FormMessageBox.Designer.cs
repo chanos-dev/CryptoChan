@@ -1,4 +1,4 @@
-﻿namespace CryptChan
+﻿namespace CryptoChan
 {
     partial class FormMessageBox
     {
@@ -51,7 +51,7 @@
             // 
             // pictureBox_Close
             // 
-            this.pictureBox_Close.Image = global::CryptChan.Properties.Resources.Close;
+            this.pictureBox_Close.Image = global::CryptoChan.Properties.Resources.Close;
             this.pictureBox_Close.Location = new System.Drawing.Point(414, 14);
             this.pictureBox_Close.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pictureBox_Close.Name = "pictureBox_Close";

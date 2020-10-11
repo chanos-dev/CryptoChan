@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CryptChan
+namespace CryptoChan
 {
     static class Program
     {
@@ -27,13 +27,31 @@ namespace CryptChan
 
             if (!createdNew)
             {
-                MessageBox.Show("실행 중인 프로그램을 종료 후 다시 실행해 주세요.");
+                using (FormMessageBox fm = new FormMessageBox(Properties.Resources.AlreadyProgram))
+                {
+                    fm.ShowDialog();
+                } 
+
                 return;
             }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCrypto());
+            
+
+            using (FormLogin fm = new FormLogin(FormLogin.FormType.Login))
+            {
+                DialogResult dialogResult = fm.ShowDialog();
+
+                if (dialogResult == DialogResult.OK)
+                {
+                    Application.Run(new FormCrypto());
+                }
+                else
+                {
+                    return;
+                }
+            } 
         }
     }
 }

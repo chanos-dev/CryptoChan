@@ -1,4 +1,4 @@
-﻿namespace CryptChan
+﻿namespace CryptoChan
 {
     partial class FormCrypto
     {
@@ -83,7 +83,7 @@
             this.button_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Setting.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Setting.ForeColor = System.Drawing.Color.Silver;
-            this.button_Setting.Image = global::CryptChan.Properties.Resources.Setting;
+            this.button_Setting.Image = global::CryptoChan.Properties.Resources.Setting;
             this.button_Setting.Location = new System.Drawing.Point(0, 352);
             this.button_Setting.Name = "button_Setting";
             this.button_Setting.Size = new System.Drawing.Size(163, 87);
@@ -100,7 +100,7 @@
             this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Close.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Close.ForeColor = System.Drawing.Color.Silver;
-            this.button_Close.Image = global::CryptChan.Properties.Resources.Exit;
+            this.button_Close.Image = global::CryptoChan.Properties.Resources.Exit;
             this.button_Close.Location = new System.Drawing.Point(0, 442);
             this.button_Close.Name = "button_Close";
             this.button_Close.Size = new System.Drawing.Size(163, 87);
@@ -117,7 +117,7 @@
             this.button_Calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Calendar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Calendar.ForeColor = System.Drawing.Color.Silver;
-            this.button_Calendar.Image = global::CryptChan.Properties.Resources.Calendar;
+            this.button_Calendar.Image = global::CryptoChan.Properties.Resources.Calendar;
             this.button_Calendar.Location = new System.Drawing.Point(0, 261);
             this.button_Calendar.Name = "button_Calendar";
             this.button_Calendar.Size = new System.Drawing.Size(163, 87);
@@ -134,7 +134,7 @@
             this.button_Lock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Lock.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Lock.ForeColor = System.Drawing.Color.Silver;
-            this.button_Lock.Image = global::CryptChan.Properties.Resources.Lock;
+            this.button_Lock.Image = global::CryptoChan.Properties.Resources.Lock;
             this.button_Lock.Location = new System.Drawing.Point(0, 171);
             this.button_Lock.Name = "button_Lock";
             this.button_Lock.Size = new System.Drawing.Size(163, 87);
@@ -211,7 +211,7 @@
             // 
             this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "CryptChan";
+            this.notifyIcon.Text = "CryptoChan";
             this.notifyIcon.Visible = true;
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
@@ -231,7 +231,7 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "CryptChan Open";
+            this.openToolStripMenuItem.Text = "CryptoChan Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
@@ -281,7 +281,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCrypto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CryptChan";
+            this.Text = "CryptoChan";
             this.Load += new System.EventHandler(this.FormCrypt_Load);
             this.panel_Left.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);

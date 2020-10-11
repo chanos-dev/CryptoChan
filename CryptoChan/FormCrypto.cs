@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Globalization; 
 using System.Windows.Forms;
 
-namespace CryptChan
+namespace CryptoChan
 {
     public partial class FormCrypto : Form
     {  

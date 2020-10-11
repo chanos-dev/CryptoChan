@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0438356A-B050-4AE8-AB52-31AF8AC03F43}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CryptChan</RootNamespace>
-    <AssemblyName>CryptChan</AssemblyName>
+    <RootNamespace>CryptoChan</RootNamespace>
+    <AssemblyName>CryptoChan</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

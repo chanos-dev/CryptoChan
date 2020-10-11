@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace CryptChan
+namespace CryptoChan
 {
     enum Options
     {
@@ -78,11 +78,19 @@ namespace CryptChan
                     setting.isNotify = isChecked;
                     break;
             }
+        }  
+
+        private void button_Crypto_Click(object sender, EventArgs e)
+        {
+            setting.Save();
         }
 
-        private void radioButton_pwYes_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_pwYes_Click(object sender, EventArgs e)
         {
-            SetOption(Options.PW, true);  
+            SetOption(Options.PW, true);
+
+            if (!setting.isPW)
+                return;
 
             DB db = new DB();
 
@@ -92,7 +100,11 @@ namespace CryptChan
                 {
                     if (string.IsNullOrEmpty(db.GetPassWord()))
                     {
-                        //최초 pw 설정
+                        //최초 pw 설정 
+                        using (FormLogin fm = new FormLogin(FormLogin.FormType.SetPassWord))
+                        {
+                            fm.ShowDialog();
+                        }
                     }
                 }
                 else
@@ -104,27 +116,22 @@ namespace CryptChan
             {
                 db.CloseConnection();
             }
-        } 
+        }
 
-        private void radioButton_pwNo_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_pwNo_Click(object sender, EventArgs e)
         {
             SetOption(Options.PW, false);
         }
 
-        private void radioButton_notifyYes_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_notifyYes_Click(object sender, EventArgs e)
         {
             SetOption(Options.Notify, true);
         }
 
-        private void radioButton_notifyNo_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_notifyNo_Click(object sender, EventArgs e)
         {
             SetOption(Options.Notify, false);
         }
-
-        private void button_Crypto_Click(object sender, EventArgs e)
-        {
-            setting.Save();
-        } 
     }
 
     public class Setting

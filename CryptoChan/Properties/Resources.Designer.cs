@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CryptChan.Properties {
+namespace CryptoChan.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace CryptChan.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CryptChan.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CryptoChan.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace CryptChan.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   CE90001:프로그램이 이미 실행 중입니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string AlreadyProgram {
+            get {
+                return ResourceManager.GetString("AlreadyProgram", resourceCulture);
             }
         }
         
@@ -81,7 +90,7 @@ namespace CryptChan.Properties {
         }
         
         /// <summary>
-        ///   CE10001:입력한 파일의 암호가 틀립니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   CE20001:입력한 파일의 암호가 틀립니다.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string EncryptPass {
             get {
@@ -110,12 +119,30 @@ namespace CryptChan.Properties {
         }
         
         /// <summary>
+        ///   CE41001:비밀번호를 가져오지 못했습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string GetPassWord {
+            get {
+                return ResourceManager.GetString("GetPassWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static System.Drawing.Bitmap Home {
             get {
                 object obj = ResourceManager.GetObject("Home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   CE41002:비밀번호가 잘못되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string IncPassWord {
+            get {
+                return ResourceManager.GetString("IncPassWord", resourceCulture);
             }
         }
         
@@ -136,6 +163,24 @@ namespace CryptChan.Properties {
             get {
                 object obj = ResourceManager.GetObject("progress", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   CE41003:비밀번호를 3회 잘못 입력하여 프로그램을 종료합니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string RetryPassWord {
+            get {
+                return ResourceManager.GetString("RetryPassWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   CE40001:비밀번호 설정에 실패 했습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string SetPassWord {
+            get {
+                return ResourceManager.GetString("SetPassWord", resourceCulture);
             }
         }
         

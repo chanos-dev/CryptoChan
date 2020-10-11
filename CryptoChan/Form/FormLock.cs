@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace CryptChan
+namespace CryptoChan
 {
     public partial class FormLock : UserControl
     { 

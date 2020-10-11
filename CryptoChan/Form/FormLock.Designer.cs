@@ -1,4 +1,4 @@
-﻿namespace CryptChan
+﻿namespace CryptoChan
 {
     partial class FormLock
     {
@@ -36,7 +36,7 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.button_Crypto = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.userTextBox1 = new CryptChan.UserTextBox();
+            this.userTextBox1 = new CryptoChan.UserTextBox();
             this.label_name = new System.Windows.Forms.Label();
             this.button_OpenFileBrowser = new System.Windows.Forms.Button();
             this.label_text2 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             // 
             // pictureBox_progress
             // 
-            this.pictureBox_progress.Image = global::CryptChan.Properties.Resources.progress;
+            this.pictureBox_progress.Image = global::CryptoChan.Properties.Resources.progress;
             this.pictureBox_progress.Location = new System.Drawing.Point(241, 343);
             this.pictureBox_progress.Name = "pictureBox_progress";
             this.pictureBox_progress.Size = new System.Drawing.Size(95, 87);
@@ -191,7 +191,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CryptChan.Properties.Resources.file;
+            this.pictureBox1.Image = global::CryptoChan.Properties.Resources.file;
             this.pictureBox1.Location = new System.Drawing.Point(241, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 98);

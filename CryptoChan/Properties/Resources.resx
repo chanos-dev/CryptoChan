@@ -149,6 +149,21 @@
     <value>..\img\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EncryptPass" xml:space="preserve">
-    <value>CE10001:입력한 파일의 암호가 틀립니다.</value>
+    <value>CE20001:입력한 파일의 암호가 틀립니다.</value>
+  </data>
+  <data name="SetPassWord" xml:space="preserve">
+    <value>CE40001:비밀번호 설정에 실패 했습니다.</value>
+  </data>
+  <data name="GetPassWord" xml:space="preserve">
+    <value>CE41001:비밀번호를 가져오지 못했습니다.</value>
+  </data>
+  <data name="IncPassWord" xml:space="preserve">
+    <value>CE41002:비밀번호가 잘못되었습니다.</value>
+  </data>
+  <data name="RetryPassWord" xml:space="preserve">
+    <value>CE41003:비밀번호를 3회 잘못 입력하여 프로그램을 종료합니다.</value>
+  </data>
+  <data name="AlreadyProgram" xml:space="preserve">
+    <value>CE90001:프로그램이 이미 실행 중입니다.</value>
   </data>
 </root>

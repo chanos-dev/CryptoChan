@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CryptChan
+namespace CryptoChan
 {
     class DB
     {
@@ -68,6 +68,7 @@ namespace CryptChan
                     else
                     {
                         //Fail
+                        return false;
                     }
                 } 
 
@@ -78,9 +79,10 @@ namespace CryptChan
                 else
                 {
                     //Fail
+                    return false;
                 }
             }
-            catch //(Exception e)
+            catch  
             {
                 return false;
             }
@@ -170,7 +172,7 @@ namespace CryptChan
                 SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
                 command.ExecuteNonQuery(); 
             }
-            catch //(Exception e)
+            catch  
             { 
                 return false;
             }
@@ -205,7 +207,7 @@ namespace CryptChan
                     files.Add(queryReader[2].ToString());
                 }
             }
-            catch //(Exception e)
+            catch  
             {
                 return null;
             }
@@ -255,7 +257,7 @@ namespace CryptChan
 
                 totalFiles = totalFiles.Reverse().ToDictionary(dict => dict.Key, dict => dict.Value);
             }
-            catch //(Exception e)
+            catch  
             {
                 return null;
             }
@@ -269,7 +271,7 @@ namespace CryptChan
             {
                 conn.Close();
             }
-            catch //(Exception e)
+            catch  
             {
                 return false;
             }
@@ -300,7 +302,7 @@ namespace CryptChan
                     result = int.Parse(queryReader[0].ToString());
                 }
             }
-            catch //(Exception e)
+            catch  
             {
                 return -1;
             }
@@ -331,12 +333,36 @@ namespace CryptChan
                     result = queryReader[0].ToString();
                 }
             }
-            catch //(Exception e)
+            catch(Exception e)
             {
-                return null;
+                throw e;
             }
 
             return result;
+        }
+
+        public bool InsertPassWord(string pw)
+        {
+            if (string.IsNullOrEmpty(pw))
+                return false;
+
+            string passWord = Encrypt.Instance.EncyptPass(pw);
+
+            try
+            {  
+                StringBuilder sbQuery = new StringBuilder();
+
+                sbQuery.Append("insert into user (id, pw, create_at) ");
+                sbQuery.Append($"values (\"root\", \"{passWord}\", {DateTime.Now.ToString("yyyyMMdd")}); ");
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                command.ExecuteNonQuery();
+            }
+            catch(Exception e)  
+            {
+                throw e;
+            }
+
+            return true; 
         }
     }
 }

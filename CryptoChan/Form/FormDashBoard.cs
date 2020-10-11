@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CryptChan
+namespace CryptoChan
 {
     public partial class FormDashBoard : UserControl
     {

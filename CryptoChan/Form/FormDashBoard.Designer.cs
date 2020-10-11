@@ -1,4 +1,4 @@
-﻿namespace CryptChan
+﻿namespace CryptoChan
 {
     partial class FormDashBoard
     {

@@ -1,4 +1,4 @@
-﻿namespace CryptChan
+﻿namespace CryptoChan
 {
     partial class FormSetting
     {
@@ -126,7 +126,7 @@
             this.radioButton_notifyNo.TabStop = true;
             this.radioButton_notifyNo.Text = "미사용";
             this.radioButton_notifyNo.UseVisualStyleBackColor = true;
-            this.radioButton_notifyNo.CheckedChanged += new System.EventHandler(this.radioButton_notifyNo_CheckedChanged);
+            this.radioButton_notifyNo.Click += new System.EventHandler(this.radioButton_notifyNo_Click);
             // 
             // radioButton_notifyYes
             // 
@@ -139,7 +139,7 @@
             this.radioButton_notifyYes.TabStop = true;
             this.radioButton_notifyYes.Text = "사용";
             this.radioButton_notifyYes.UseVisualStyleBackColor = true;
-            this.radioButton_notifyYes.CheckedChanged += new System.EventHandler(this.radioButton_notifyYes_CheckedChanged);
+            this.radioButton_notifyYes.Click += new System.EventHandler(this.radioButton_notifyYes_Click);
             // 
             // groupBox_pw
             // 
@@ -150,7 +150,7 @@
             this.groupBox_pw.Name = "groupBox_pw";
             this.groupBox_pw.Size = new System.Drawing.Size(295, 64);
             this.groupBox_pw.TabIndex = 7;
-            this.groupBox_pw.TabStop = false; 
+            this.groupBox_pw.TabStop = false;
             // 
             // label_pw
             // 
@@ -173,7 +173,7 @@
             this.radioButton_pwNo.TabStop = true;
             this.radioButton_pwNo.Text = "미사용";
             this.radioButton_pwNo.UseVisualStyleBackColor = true;
-            this.radioButton_pwNo.CheckedChanged += new System.EventHandler(this.radioButton_pwNo_CheckedChanged);
+            this.radioButton_pwNo.Click += new System.EventHandler(this.radioButton_pwNo_Click);
             // 
             // radioButton_pwYes
             // 
@@ -186,7 +186,7 @@
             this.radioButton_pwYes.TabStop = true;
             this.radioButton_pwYes.Text = "사용";
             this.radioButton_pwYes.UseVisualStyleBackColor = true;
-            this.radioButton_pwYes.CheckedChanged += new System.EventHandler(this.radioButton_pwYes_CheckedChanged);
+            this.radioButton_pwYes.Click += new System.EventHandler(this.radioButton_pwYes_Click);
             // 
             // label_default
             // 
@@ -211,7 +211,7 @@
             this.ForeColor = System.Drawing.Color.Silver;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "FormSetting";
-            this.Size = new System.Drawing.Size(617, 464); 
+            this.Size = new System.Drawing.Size(617, 464);
             this.panel_main.ResumeLayout(false);
             this.panel_right.ResumeLayout(false);
             this.panel_Left.ResumeLayout(false);
