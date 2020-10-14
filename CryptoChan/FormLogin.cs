@@ -85,16 +85,11 @@ namespace CryptoChan
                 this.Close();
             }
             else
-            { 
-                using (FormMessageBox fm = new FormMessageBox(Properties.Resources.IncPassWord))
-                {
-                    fm.ShowDialog();
-                }
-
+            {
                 reTry++;
 
                 if (reTry > 2)
-                { 
+                {
                     using (FormMessageBox fm = new FormMessageBox(Properties.Resources.RetryPassWord))
                     {
                         fm.ShowDialog();
@@ -103,6 +98,11 @@ namespace CryptoChan
                     this.DialogResult = DialogResult.No;
                     this.Close();
                 }
+
+                using (FormMessageBox fm = new FormMessageBox(Properties.Resources.IncPassWord))
+                {
+                    fm.ShowDialog();
+                } 
             }
         }
 
