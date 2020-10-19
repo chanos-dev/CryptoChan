@@ -12,12 +12,26 @@ using System.Runtime.InteropServices;
 namespace CryptoChan
 {
     public partial class UserTextBox : UserControl
-    {
+    {  
         [DllImport("imm32.dll")]
         private static extern IntPtr ImmGetContext(IntPtr hwnd);
         [DllImport("imm32.dll")]
-        private static extern bool ImmGetConversionStatus(IntPtr himc, ref int lpdw, ref int lpdw2);
-        
+        private static extern bool ImmGetConversionStatus(IntPtr himc, ref int lpdw, ref int lpdw2); 
+
+        public object Button { get; set; }
+
+        public bool EnterKey()
+        {
+            if(Button is Button button)
+            {
+                button.PerformClick();
+                return true;
+            }
+            else
+            {
+                return false;
+            }            
+        }
 
         public UserTextBox()
         {
@@ -96,6 +110,14 @@ namespace CryptoChan
                 label_IME.Text = "A";
             else
                 label_IME.Text = "가"; 
-        }   
+        }
+
+        private void textBox_pw_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                EnterKey();
+            }
+        }
     }
 }

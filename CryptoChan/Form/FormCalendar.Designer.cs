@@ -28,13 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label_total4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label_total4
+            // 
+            this.label_total4.Font = new System.Drawing.Font("Comic Sans MS", 11F);
+            this.label_total4.ForeColor = System.Drawing.Color.Silver;
+            this.label_total4.Location = new System.Drawing.Point(3, 221);
+            this.label_total4.Name = "label_total4";
+            this.label_total4.Size = new System.Drawing.Size(614, 23);
+            this.label_total4.TabIndex = 14;
+            this.label_total4.Text = "In progress";
+            this.label_total4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.label_total4);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -45,5 +58,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label_total4;
     }
 }

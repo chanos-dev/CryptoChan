@@ -26,6 +26,12 @@ namespace CryptoChan
         {
             InitializeComponent();
             this.formType = formType;
+            InitializeControl();
+        }
+
+        private void InitializeControl()
+        {
+            userTextBox1.Button = button_ok;
         }
 
         private void button_ok_Click(object sender, EventArgs e)
@@ -98,11 +104,13 @@ namespace CryptoChan
                     this.DialogResult = DialogResult.No;
                     this.Close();
                 }
-
-                using (FormMessageBox fm = new FormMessageBox(Properties.Resources.IncPassWord))
+                else
                 {
-                    fm.ShowDialog();
-                } 
+                    using (FormMessageBox fm = new FormMessageBox(Properties.Resources.IncPassWord))
+                    {
+                        fm.ShowDialog();
+                    }
+                }
             }
         }
 
@@ -154,6 +162,12 @@ namespace CryptoChan
         private void label_logo_MouseDown(object sender, MouseEventArgs e)
         {
             mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void userTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                button_ok.PerformClick();
         }
     }
 }

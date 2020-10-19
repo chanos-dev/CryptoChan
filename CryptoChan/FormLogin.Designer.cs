@@ -33,7 +33,7 @@
             this.label_logo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button_ok = new System.Windows.Forms.Button();
-            this.userTextBox1 = new CryptoChan.UserTextBox();
+            this.userTextBox1 = new CryptoChan.UserTextBox();        
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             this.SuspendLayout();
@@ -112,6 +112,7 @@
             this.userTextBox1.Name = "userTextBox1";
             this.userTextBox1.Size = new System.Drawing.Size(231, 30);
             this.userTextBox1.TabIndex = 12;
+            this.userTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userTextBox1_KeyDown);
             // 
             // FormLogin
             // 

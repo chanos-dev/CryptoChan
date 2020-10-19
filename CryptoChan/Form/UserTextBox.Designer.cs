@@ -80,6 +80,7 @@
             this.textBox_pw.Size = new System.Drawing.Size(170, 23);
             this.textBox_pw.TabIndex = 0;
             this.textBox_pw.TextChanged += new System.EventHandler(this.textBox_pw_TextChanged);
+            this.textBox_pw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_pw_KeyDown);
             // 
             // UserTextBox
             // 

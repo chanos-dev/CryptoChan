@@ -36,7 +36,9 @@ namespace CryptoChan
             if(isWidth)            
                 panel_SaveAs.Width = 0;
             else
-                panel_SaveAs.Height = 0;             
+                panel_SaveAs.Height = 0;
+
+            userTextBox1.Button = button_Crypto;
         } 
 
         private void panel_main_DragDrop(object sender, DragEventArgs e)
@@ -98,7 +100,7 @@ namespace CryptoChan
                     catch (Exception exc)
                     {
                         isSuccess = false;
-
+                         
                         msg = exc.Message; 
                     }
                 }));
