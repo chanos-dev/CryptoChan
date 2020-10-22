@@ -130,7 +130,7 @@ namespace CryptoChan
         }
 
         private void button_DashBoard_Click(object sender, EventArgs e)
-        {
+        { 
             MoveTurnPanel(ButtonType.DashBoard);
             ShowSelectForm(ButtonType.DashBoard);
         }

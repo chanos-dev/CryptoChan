@@ -77,3 +77,4 @@ C:\Users\Chanos\Desktop\git\CryptoChan\CryptoChan\obj\Debug\CryptoChan.UserTextB
 C:\Users\Chanos\Desktop\git\CryptoChan\CryptoChan\obj\Debug\CryptoChan.FormDashBoard.resources
 C:\Users\Chanos\Desktop\git\CryptoChan\CryptoChan\obj\Debug\CryptoChan.exe
 C:\Users\Chanos\Desktop\git\CryptoChan\CryptoChan\obj\Debug\CryptoChan.pdb
+C:\Users\Chanos\Desktop\git\CryptoChan\CryptoChan\obj\Debug\CryptoChan.FormManagementS.resources
