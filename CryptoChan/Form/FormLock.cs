@@ -155,7 +155,9 @@ namespace CryptoChan
             if (Encrypt.Instance.ext.Contains("chan"))
                 button_Crypto.Text = "Decrypt";
             else
-                button_Crypto.Text = "Encrypt"; 
+                button_Crypto.Text = "Encrypt";
+
+            userTextBox1.Clear();
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -192,19 +194,19 @@ namespace CryptoChan
 
                     if (Encrypt.Instance.isEncrypt) //암호화
                     {  
-                        using (FileStream fss = new FileStream(filePath, FileMode.Create))
+                        using (FileStream fs = new FileStream(filePath, FileMode.Create))
                         {
                             byte[] exts = Encoding.UTF8.GetBytes(ext);
 
-                            fss.Write(Encrypt.Instance.encryptionFile, 0, Encrypt.Instance.encryptionFile.Length);
-                            fss.Write(exts, 0, exts.Length);
+                            fs.Write(Encrypt.Instance.encryptionFile, 0, Encrypt.Instance.encryptionFile.Length);
+                            fs.Write(exts, 0, exts.Length);
                         }
                     }
                     else //복호화
                     { 
-                        using (FileStream fss = new FileStream(filePath, FileMode.Create))
+                        using (FileStream fs = new FileStream(filePath, FileMode.Create))
                         {
-                            fss.Write(Encrypt.Instance.encryptionFile, 0, Encrypt.Instance.encryptionFile.Length);
+                            fs.Write(Encrypt.Instance.encryptionFile, 0, Encrypt.Instance.encryptionFile.Length);
                         }
                     }
 

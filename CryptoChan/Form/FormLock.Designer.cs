@@ -85,7 +85,7 @@
             // 
             // panel_SaveAs
             // 
-            this.panel_SaveAs.BackColor = System.Drawing.Color.Silver;
+            this.panel_SaveAs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
             this.panel_SaveAs.Controls.Add(this.button_Cancel);
             this.panel_SaveAs.Controls.Add(this.buttonSave);
             this.panel_SaveAs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -146,6 +146,7 @@
             // userTextBox1
             // 
             this.userTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.userTextBox1.Button = null;
             this.userTextBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.userTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.userTextBox1.Location = new System.Drawing.Point(174, 91);

@@ -20,8 +20,7 @@ namespace CryptoChan
 
     public partial class FormSetting : UserControl
     {
-        bool isChanged { get; set; }
-        private Setting setting;
+        bool isChanged { get; set; } 
 
         public FormSetting()
         {
@@ -30,16 +29,13 @@ namespace CryptoChan
         }
 
         private void InitializeControl()
-        {
-            setting = new Setting();
-            setting.Load();
-
-            if (setting.isPW)
+        {  
+            if (Setting.Option.isPW)
                 radioButton_pwYes.Checked = true;
             else
                 radioButton_pwNo.Checked = true;
 
-            if (setting.isNotify)
+            if (Setting.Option.isNotify)
                 radioButton_notifyYes.Checked = true;
             else
                 radioButton_notifyNo.Checked = true;            
@@ -60,36 +56,31 @@ namespace CryptoChan
             isChanged = true;
             radioButton_pwNo.Checked = true;
             radioButton_notifyYes.Checked = true;            
-        }
-
-        private bool Save(Setting setting)
-        {
-            return true;
-        }
+        } 
 
         private void SetOption(Options options, bool isChecked)
         {
             switch(options)
             {
                 case Options.PW:
-                    setting.isPW = isChecked;
+                    Setting.Option.isPW = isChecked;
                     break;
                 case Options.Notify:
-                    setting.isNotify = isChecked;
+                    Setting.Option.isNotify = isChecked;
                     break;
             }
         }  
 
         private void button_Crypto_Click(object sender, EventArgs e)
         {
-            setting.Save();
+            Setting.Option.Save();
         }
 
         private void radioButton_pwYes_Click(object sender, EventArgs e)
         {
             SetOption(Options.PW, true);
 
-            if (!setting.isPW)
+            if (!Setting.Option.isPW)
                 return;
 
             DB db = new DB();
@@ -130,32 +121,50 @@ namespace CryptoChan
 
         private void radioButton_notifyNo_Click(object sender, EventArgs e)
         {
-            SetOption(Options.Notify, false);
+            SetOption(Options.Notify, false);            
         }
     }
 
     public class Setting
     {
+        public static Option Option { get; private set; } = null;
+
+        static Setting()
+        {
+            Option = new Option();
+        }
+    }
+
+    public class Option
+    {
         [XmlIgnore]
         private string path => $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\CryptoChan\\setting.xml";
 
         public bool isPW { get; set; }
-        public bool isNotify { get; set; }
+        public bool isNotify { get; set; } 
 
-        public Setting()
+        public Option()
         {
             
         }
 
         public void Load()
         {
-            using (var reader = new StreamReader(path))
+            try
             {
-                XmlSerializer xs = new XmlSerializer(typeof(Setting));
-                Setting setting = (Setting)xs.Deserialize(reader);
+                using (var reader = new StreamReader(path))
+                {
+                    XmlSerializer xs = new XmlSerializer(typeof(Option));
+                    Option option = (Option)xs.Deserialize(reader);
 
-                this.isPW = setting.isPW;
-                this.isNotify = setting.isNotify;
+                    this.isPW = option.isPW;
+                    this.isNotify = option.isNotify;
+                }
+            }
+            catch
+            {
+                SetDefaultOptions();
+                Save();
             }
         }
 
@@ -166,9 +175,15 @@ namespace CryptoChan
                 XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
                 ns.Add("", "");
 
-                XmlSerializer xs = new XmlSerializer(typeof(Setting));
+                XmlSerializer xs = new XmlSerializer(typeof(Option));
                 xs.Serialize(wr, this, ns);
             }
+        }
+
+        private void SetDefaultOptions()
+        {
+            this.isPW = false;
+            this.isNotify = true;
         }
     }
 }

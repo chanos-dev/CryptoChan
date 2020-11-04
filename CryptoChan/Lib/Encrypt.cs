@@ -168,6 +168,7 @@ namespace CryptoChan
                         fs.Read(fileBytes, 0, Convert.ToInt32(fs.Length));  
                     }
 
+
                     int indexDot = 0; 
 
                     for(int i=fileBytes.Length-1; i>=0; i--)
@@ -185,7 +186,7 @@ namespace CryptoChan
 
                     try
                     {
-                        encryptionFile = Encrypt.Instance.DecryptFile(fileBytes, keyBytes, saltBytes);
+                        encryptionFile = DecryptFile(fileBytes, keyBytes, saltBytes);
                     }
                     catch
                     {
@@ -203,7 +204,7 @@ namespace CryptoChan
                         fs.Read(fileBytes, 0, Convert.ToInt32(fs.Length));
                     }
                      
-                    encryptionFile = Encrypt.Instance.EncryptFile(fileBytes, keyBytes, saltBytes); 
+                    encryptionFile = EncryptFile(fileBytes, keyBytes, saltBytes); 
                 }
             }
             catch(Exception e)

@@ -52,6 +52,11 @@ namespace CryptoChan
             ControlPaint.DrawBorder(e.Graphics, panel.DisplayRectangle, Color.Silver, ButtonBorderStyle.Solid);
         }
 
+        public void Clear()
+        {
+            textBox_pw.Text = "";
+        }
+
         public override string ToString()
         {
             return textBox_pw.Text;

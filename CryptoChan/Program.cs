@@ -37,21 +37,29 @@ namespace CryptoChan
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
 
-            using (FormLogin fm = new FormLogin(FormLogin.FormType.Login))
+            Setting.Option.Load();
+
+            if (Setting.Option.isPW)
             {
-                DialogResult dialogResult = fm.ShowDialog();
+                using (FormLogin fm = new FormLogin(FormLogin.FormType.Login))
+                {
+                    DialogResult dialogResult = fm.ShowDialog();
 
-                if (dialogResult == DialogResult.OK)
-                {
-                    Application.Run(new FormCrypto());
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        Application.Run(new FormCrypto());
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
-                else
-                {
-                    return;
-                }
-            } 
+            }
+            else
+            {
+                Application.Run(new FormCrypto());
+            }
         }
     }
 }
