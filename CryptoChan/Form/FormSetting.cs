@@ -145,7 +145,8 @@ namespace CryptoChan
 
         public Option()
         {
-            
+            if (Directory.Exists(path))
+                Directory.CreateDirectory(path);
         }
 
         public void Load()
