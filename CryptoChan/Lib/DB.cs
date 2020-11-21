@@ -13,7 +13,7 @@ namespace CryptoChan
     {
         const int MAX_ROWDATE = 100;
 
-        private SQLiteConnection conn = null;
+        private SQLiteConnection connect = null;
 
         public static int todayTotalOrder = 0;
 
@@ -94,10 +94,10 @@ namespace CryptoChan
         {
             try
             {
-                if (conn is null)
+                if (connect is null)
                 {
-                    conn = new SQLiteConnection($"Data Source={path};Version=3;");
-                    conn.Open();
+                    connect = new SQLiteConnection($"Data Source={path};Version=3;");
+                    connect.Open();
 
                     todayTotalOrder = GetTotalOrder();
                 }
@@ -123,7 +123,7 @@ namespace CryptoChan
                 sbQuery.Append(" file_name varchar(256) Not NULL, ");
                 sbQuery.Append(" file_order integer Not NULL)");
 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 result = command.ExecuteNonQuery();                
             }
             catch (Exception e)
@@ -147,7 +147,7 @@ namespace CryptoChan
                 sbQuery.Append(" pw varchar(256) Not NULL, ");
                 sbQuery.Append(" create_at varchar(8) Not NULL) ");
 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 result = command.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -169,7 +169,7 @@ namespace CryptoChan
 
                 sbQuery.Append("insert into files (create_at, file_name, file_order) ");
                 sbQuery.Append($"values ({DateTime.Now.ToString("yyyyMMdd")}, \"{fileName}\", {++todayTotalOrder}); "); 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 command.ExecuteNonQuery(); 
             }
             catch  
@@ -199,7 +199,7 @@ namespace CryptoChan
                 //limit
                 sbQuery.Append($"limit 6 ");
 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 SQLiteDataReader queryReader = command.ExecuteReader();
 
                 while (queryReader.Read())
@@ -234,7 +234,7 @@ namespace CryptoChan
                 //limit
                 sbQuery.Append($"limit 5 ");
 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 SQLiteDataReader queryReader = command.ExecuteReader();
 
                 while (queryReader.Read())
@@ -269,7 +269,7 @@ namespace CryptoChan
         {
             try
             {
-                conn.Close();
+                connect.Close();
             }
             catch  
             {
@@ -294,7 +294,7 @@ namespace CryptoChan
                 //where
                 sbQuery.Append($"where create_at = \"{DateTime.Now.ToString("yyyyMMdd")}\""); 
 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);  
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);  
                 SQLiteDataReader queryReader = command.ExecuteReader();
                  
                 while (queryReader.Read())
@@ -325,7 +325,7 @@ namespace CryptoChan
                 //where
                 sbQuery.Append($"where id = \"root\"");
 
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 SQLiteDataReader queryReader = command.ExecuteReader();
 
                 while (queryReader.Read())
@@ -354,7 +354,7 @@ namespace CryptoChan
 
                 sbQuery.Append("insert into user (id, pw, create_at) ");
                 sbQuery.Append($"values (\"root\", \"{passWord}\", {DateTime.Now.ToString("yyyyMMdd")}); ");
-                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), conn);
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
                 command.ExecuteNonQuery();
             }
             catch(Exception e)  
@@ -363,6 +363,32 @@ namespace CryptoChan
             }
 
             return true; 
+        }
+
+        public bool UpdatePassWord(string pw)
+        {
+            if (string.IsNullOrEmpty(pw))
+                return false;
+
+            string passWord = Encrypt.Instance.EncyptPass(pw);
+
+            try
+            {
+                StringBuilder sbQuery = new StringBuilder();
+
+                sbQuery.Append($"update user set pw = \"{passWord}\" ");
+                sbQuery.Append($"where id = \"root\" ");
+
+                SQLiteCommand command = new SQLiteCommand(sbQuery.ToString(), connect);
+                command.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+
+            return true;
+
         }
     }
 }

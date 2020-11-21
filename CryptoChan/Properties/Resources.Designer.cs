@@ -213,5 +213,14 @@ namespace CryptoChan.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   CE40002:비밀번호 업데이트에 실패 했습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string UpdatePassWord {
+            get {
+                return ResourceManager.GetString("UpdatePassWord", resourceCulture);
+            }
+        }
     }
 }

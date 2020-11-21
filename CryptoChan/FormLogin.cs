@@ -15,7 +15,8 @@ namespace CryptoChan
         public enum FormType
         {
             Login,
-            SetPassWord
+            SetPassWord,
+            UpdatePassWord
         }
 
         FormType formType;
@@ -43,6 +44,9 @@ namespace CryptoChan
                     break;
                 case FormType.SetPassWord:
                     SetPassWord();
+                    break;
+                case FormType.UpdatePassWord:
+                    UpdatePassword();
                     break;
             } 
         }
@@ -133,6 +137,38 @@ namespace CryptoChan
             catch (Exception ex)
             {
                 string msg = $"{Properties.Resources.SetPassWord}\n{ex.Message}";
+
+                using (FormMessageBox fm = new FormMessageBox(msg))
+                {
+                    fm.ShowDialog();
+                }
+            }
+            finally
+            {
+                db.CloseConnection();
+                this.Close();
+            }
+        }
+
+        private void UpdatePassword()
+        {
+            if (string.IsNullOrEmpty(userTextBox1.ToString()))
+                return;
+
+            string pw = userTextBox1.ToString();
+
+            DB db = new DB();
+
+            try
+            {
+                if (db.ConnectionDataBase())
+                {
+                    db.UpdatePassWord(pw);
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = $"{Properties.Resources.UpdatePassWord}\n{ex.Message}";
 
                 using (FormMessageBox fm = new FormMessageBox(msg))
                 {

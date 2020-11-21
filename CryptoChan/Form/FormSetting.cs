@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
+using static CryptoChan.FormLogin;
 
 namespace CryptoChan
 {
@@ -29,9 +30,14 @@ namespace CryptoChan
         }
 
         private void InitializeControl()
-        {  
+        {
+            button_Change.Enabled = false;
+
             if (Setting.Option.isPW)
+            {
                 radioButton_pwYes.Checked = true;
+                button_Change.Enabled = true;
+            }
             else
                 radioButton_pwNo.Checked = true;
 
@@ -83,16 +89,22 @@ namespace CryptoChan
             if (!Setting.Option.isPW)
                 return;
 
+            button_Change.Enabled = true;
+            SettingPassword(FormType.SetPassWord);
+        }
+
+        private void SettingPassword(FormType formType)
+        {
             DB db = new DB();
 
             try
             {
                 if (db.ConnectionDataBase())
                 {
-                    if (string.IsNullOrEmpty(db.GetPassWord()))
+                    if ( string.IsNullOrEmpty(db.GetPassWord()) || (formType == FormType.UpdatePassWord) )
                     {
-                        //최초 pw 설정 
-                        using (FormLogin fm = new FormLogin(FormLogin.FormType.SetPassWord))
+                        //최초 pw 설정 || Update
+                        using (FormLogin fm = new FormLogin(formType))
                         {
                             fm.ShowDialog();
                         }
@@ -112,6 +124,7 @@ namespace CryptoChan
         private void radioButton_pwNo_Click(object sender, EventArgs e)
         {
             SetOption(Options.PW, false);
+            button_Change.Enabled = false;
         }
 
         private void radioButton_notifyYes_Click(object sender, EventArgs e)
@@ -122,6 +135,11 @@ namespace CryptoChan
         private void radioButton_notifyNo_Click(object sender, EventArgs e)
         {
             SetOption(Options.Notify, false);            
+        }
+
+        private void button_Change_Click(object sender, EventArgs e)
+        {
+            SettingPassword(FormType.UpdatePassWord);
         }
     }
 
@@ -182,7 +200,7 @@ namespace CryptoChan
         }
 
         private void SetDefaultOptions()
-        {
+        {            
             this.isPW = false;
             this.isNotify = true;
         }

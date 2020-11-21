@@ -30,6 +30,7 @@
         {
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_right = new System.Windows.Forms.Panel();
+            this.button_Change = new System.Windows.Forms.Button();
             this.button_Crypto = new System.Windows.Forms.Button();
             this.panel_Left = new System.Windows.Forms.Panel();
             this.groupBox_notify = new System.Windows.Forms.GroupBox();
@@ -61,12 +62,26 @@
             // panel_right
             // 
             this.panel_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.panel_right.Controls.Add(this.button_Change);
             this.panel_right.Controls.Add(this.button_Crypto);
             this.panel_right.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_right.Location = new System.Drawing.Point(308, 0);
             this.panel_right.Name = "panel_right";
             this.panel_right.Size = new System.Drawing.Size(309, 464);
             this.panel_right.TabIndex = 1;
+            // 
+            // button_Change
+            // 
+            this.button_Change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Change.Font = new System.Drawing.Font("Comic Sans MS", 10F);
+            this.button_Change.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.button_Change.Location = new System.Drawing.Point(96, 432);
+            this.button_Change.Name = "button_Change";
+            this.button_Change.Size = new System.Drawing.Size(128, 28);
+            this.button_Change.TabIndex = 14;
+            this.button_Change.Text = "Change Password";
+            this.button_Change.UseVisualStyleBackColor = true;
+            this.button_Change.Click += new System.EventHandler(this.button_Change_Click);
             // 
             // button_Crypto
             // 
@@ -239,5 +254,6 @@
         private System.Windows.Forms.RadioButton radioButton_pwNo;
         private System.Windows.Forms.RadioButton radioButton_pwYes;
         private System.Windows.Forms.Button button_Crypto;
+        private System.Windows.Forms.Button button_Change;
     }
 }
