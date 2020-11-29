@@ -90,6 +90,8 @@
     <Compile Include="FormManagementS.Designer.cs">
       <DependentUpon>FormManagementS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lib\Setting.cs" />
+    <Compile Include="Lib\Option.cs" />
     <Compile Include="Lib\DB.cs" />
     <Compile Include="Lib\Encrypt.cs" />
     <Compile Include="FormLogin.cs">

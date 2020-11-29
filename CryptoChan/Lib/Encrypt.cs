@@ -166,8 +166,7 @@ namespace CryptoChan
                         fileBytes = new byte[fs.Length]; 
 
                         fs.Read(fileBytes, 0, Convert.ToInt32(fs.Length));  
-                    }
-
+                    } 
 
                     int indexDot = 0; 
 

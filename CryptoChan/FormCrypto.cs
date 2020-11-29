@@ -1,4 +1,5 @@
-﻿using System; 
+﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization; 
 using System.Windows.Forms;
@@ -228,6 +229,23 @@ namespace CryptoChan
         private void EncryptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowForm(ButtonType.Lock);
+        }
+
+        private void label_logo_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/chanos-dev/CryptoChan");
+        }
+
+        private void label_logo_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is Label label) 
+                label.ForeColor = Color.White;
+        }
+
+        private void label_logo_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is Label label)
+                label.ForeColor = Color.LightBlue;
         }
     }
 }

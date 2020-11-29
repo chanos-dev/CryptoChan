@@ -183,6 +183,9 @@
             this.label_logo.Size = new System.Drawing.Size(177, 41);
             this.label_logo.TabIndex = 2;
             this.label_logo.Text = "CryptoChan";
+            this.label_logo.Click += new System.EventHandler(this.label_logo_Click);
+            this.label_logo.MouseEnter += new System.EventHandler(this.label_logo_MouseEnter);
+            this.label_logo.MouseLeave += new System.EventHandler(this.label_logo_MouseLeave);
             // 
             // panel_top
             // 
@@ -225,36 +228,36 @@
             this.toolStripMenuItem2,
             this.closeToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 104);
+            this.contextMenuStrip.Size = new System.Drawing.Size(172, 82);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.openToolStripMenuItem.Text = "CryptoChan Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(168, 6);
             // 
             // EncryptionToolStripMenuItem
             // 
             this.EncryptionToolStripMenuItem.Name = "EncryptionToolStripMenuItem";
-            this.EncryptionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.EncryptionToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.EncryptionToolStripMenuItem.Text = "Encryption";
             this.EncryptionToolStripMenuItem.Click += new System.EventHandler(this.EncryptionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(168, 6);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
