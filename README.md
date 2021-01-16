@@ -5,8 +5,6 @@
 - UI 참고 링크 : [C# Ui Academy](https://www.youtube.com/watch?v=K9Ps66GoD-k&t=562s)
 - Icon 사이트 : [Icooon Mono](https://icooon-mono.com/), [loading](https://loading.io/)
 
-- 20-0906 ~ 
-
 ---
 
 #### DashBoard
